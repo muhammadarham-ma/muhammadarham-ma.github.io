@@ -9,7 +9,23 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{
+scroll-behavior:smooth;
+background:#000; /* match your black sections */
+}
+
+body{
+min-height:100vh;
+font-family:'Inter',sans-serif;
+color:white;
+background:
+radial-gradient(at 20% 30%, #9A1B10 0px, transparent 50%),
+radial-gradient(at 30% 60%, #700C1A 0px, transparent 55%),
+radial-gradient(at 80% 50%, #0D2439 0px, transparent 60%),
+linear-gradient(90deg, #33040D 0%, #45272E 40%, #0D2439 100%);
+background-attachment:fixed;
+overflow-x:hidden;
+}
 
 body{
 min-height:100vh;
