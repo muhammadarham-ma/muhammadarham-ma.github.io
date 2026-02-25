@@ -14,115 +14,90 @@ scroll-behavior:smooth;
 background:#000; /* match your black sections */
 }
 /* ========================= */
-/* 📱 CLEAN MOBILE FIX */
+/* 📱 MOBILE RESPONSIVE FIX */
 /* ========================= */
 
-@media (max-width: 768px) {
-
-/* Fix announcement + nav spacing */
-.top-announcement{
-position:relative;
-top:0;
-left:0;
-margin:10px 0 20px 0;
-font-size:11px;
-text-align:center;
-}
+@media (max-width: 250px) {
 
 nav{
-position:relative;
-top:0;
-right:0;
-text-align:center;
-margin-bottom:15px;
+right:20px;
+top:20px;
+font-size:12px;
 }
 
-/* HERO */
+.top-announcement{
+left:20px;
+top:20px;
+font-size:11px;
+}
+
 .hero{
 flex-direction:column;
-padding:80px 20px 30px 20px;
-gap:25px;
+padding:120px 20px 40px 20px;
 text-align:center;
+gap:30px;
 }
 
-/* Your Name Smaller */
 #nameTitle{
-font-size:30px;       /* smaller */
-line-height:34px;
-letter-spacing:0;
+font-size:38px;
+line-height:44px;
+letter-spacing:0px;
 }
 
-/* MA Logo */
 .brand{
-font-size:18px;
-padding:6px 10px;
+font-size:20px;
+padding:6px 12px;
 }
 
-/* Profile Image */
 .center img{
-width:200px;
-height:260px;
+width:220px;
+height:300px;
 }
 
-/* Right Text */
 .right{
 max-width:100%;
 font-size:14px;
 }
 
-/* Tags */
 .tags{
-gap:25px;
+gap:30px;
 font-size:11px;
-margin-top:20px;
+letter-spacing:2px;
+flex-wrap:wrap;
 }
 
-/* OFFER LINE (Scrolling Text) */
 .big-text{
-font-size:34px;   /* medium small */
+font-size:38px;
 margin-top:40px;
 }
 
-/* CRM SECTION */
 .crm-section{
 flex-direction:column;
-padding:60px 20px;
-gap:40px;
+padding:80px 20px;
+gap:50px;
 }
 
-/* CRM Heading */
 .crm-heading{
-font-size:28px;   /* smaller */
-line-height:1.2;
+font-size:34px;
 }
 
-/* CRM Paragraphs */
 .crm-text p{
-font-size:14px;
-line-height:24px;
+font-size:15px;
+line-height:26px;
 }
 
-/* Remove vertical grid line effect on mobile */
-.crm-section::after{
-display:none;
-}
-
-/* Images */
 .crm-images img{
-max-width:100%;
+max-width:90%;
 }
 
-/* GET IN TOUCH line */
 .contact-line{
-font-size:40px;   /* medium small */
-margin-bottom:40px;
+font-size:40px;
 }
 
-/* Footer */
 footer{
 flex-direction:column;
 text-align:center;
-gap:8px;
+gap:10px;
 }
 
 }
@@ -631,8 +606,3 @@ profileImage.classList.remove("pop-effect");
 
 </body>
 </html>
-
-
-
-
-
