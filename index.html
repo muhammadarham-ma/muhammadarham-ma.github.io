@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Arham</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Montserrat:wght@200;300;400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+
+body{
+min-height:100vh;
+font-family:'Inter',sans-serif;
+color:white;
+background:
+radial-gradient(at 20% 30%, #9A1B10 0px, transparent 50%),
+radial-gradient(at 30% 60%, #700C1A 0px, transparent 55%),
+radial-gradient(at 80% 50%, #0D2439 0px, transparent 60%),
+linear-gradient(90deg, #33040D 0%, #45272E 40%, #0D2439 100%);
+overflow-x:hidden;
+}
+
+/* TOP LEFT ANNOUNCEMENT */
+.top-announcement{
+position:absolute;
+top:20px;
+left:60px;
+font-family:'Montserrat',sans-serif;
+font-size:13px;
+letter-spacing:2px;
+opacity:0;
+transform:translate(-40px,-40px);
+animation:slideInAnnouncement 1.4s cubic-bezier(.16,1,.3,1) forwards;
+animation-delay:.3s;
+z-index:10;
+}
+
+@keyframes slideInAnnouncement{
+to{
+opacity:1;
+transform:translate(0,0);
+}
+}
+
+/* NAV */
+nav{
+position:absolute;
+top:25px;
+right:60px;
+font-family:'Montserrat',sans-serif;
+font-weight:300;
+font-size:14px;
+letter-spacing:1px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+opacity:.7;
+transition:.3s;
+}
+
+nav a:hover{opacity:1;}
+
+/* FULL WIDTH SILVER LINE */
+.nav-silver-line{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+height:1px;
+background:linear-gradient(
+to right,
+rgba(255,255,255,0),
+rgba(192,192,192,.9),
+rgba(255,255,255,0)
+);
+opacity:.9;
+}
+
+/* HERO */
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:140px 6% 60px 6%;
+gap:40px;
+}
+
+.brand{
+font-family:'Playfair Display',serif;
+font-size:34px;
+font-weight:700;
+letter-spacing:6px;
+margin-bottom:25px;
+background:black;
+color:white;
+padding:10px 18px;
+border-radius:4px;
+display:inline-block;
+}
+
+/* GLOSSY WHITE PEARL CRYSTAL EFFECT */
+#nameTitle{
+font-family:'Playfair Display', serif;
+font-size:84px;
+line-height:92px;
+font-weight:900;
+letter-spacing:-1px;
+cursor:pointer;
+background:linear-gradient(
+120deg,
+#ffffff 0%,
+#f8f8f8 15%,
+#ffffff 25%,
+#eaeaea 35%,
+#ffffff 50%,
+#dcdcdc 65%,
+#ffffff 75%,
+#f5f5f5 85%,
+#ffffff 100%
+);
+background-size:300% 300%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:pearlCrystal 8s cubic-bezier(.4,0,.2,1) infinite;
+filter:drop-shadow(0 0 8px rgba(255,255,255,.35));
+}
+
+@keyframes pearlCrystal{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.left h1.pop{
+animation:diamondGlow 1.2s ease forwards;
+}
+
+@keyframes diamondGlow{
+0%{transform:scale(1);}
+40%{
+transform:scale(1.05);
+text-shadow:
+0 0 15px rgba(255,255,255,.9),
+0 0 35px rgba(255,255,255,.7),
+0 0 60px rgba(255,255,255,.5);
+}
+100%{
+transform:scale(1.03);
+text-shadow:
+0 0 10px rgba(255,255,255,.8),
+0 0 25px rgba(255,255,255,.6),
+0 0 45px rgba(255,255,255,.4);
+}
+}
+
+/* PROFILE IMAGE POP ON MOUSE MOVE */
+.center img{
+width:320px;
+height:420px;
+object-fit:cover;
+border-radius:8px;
+transform:scale(1.05);
+transition:transform .4s cubic-bezier(.16,1,.3,1), 
+box-shadow .4s ease;
+will-change:transform;
+}
+
+.center img.pop-effect{
+transform:scale(1.08);
+box-shadow:0 25px 80px rgba(0,0,0,.7);
+}
+
+.right{
+max-width:320px;
+font-family:'Montserrat',sans-serif;
+font-weight:300;
+}
+
+.tags{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:160px;
+letter-spacing:4px;
+font-size:14px;
+font-family:'Montserrat',sans-serif;
+}
+
+.big-text{
+margin-top:120px;
+font-family:'Playfair Display', serif;
+font-size:150px;
+white-space:nowrap;
+overflow:hidden;
+font-weight:900;
+letter-spacing:-2px;
+opacity:0;
+transform:translateY(40px);
+animation:fadeUp 1.2s ease forwards;
+cursor:pointer;
+transition:.4s;
+}
+
+.big-text.active{
+text-shadow:
+0 0 25px rgba(255,255,255,.6),
+0 0 60px rgba(255,255,255,.4);
+}
+
+.big-text span{
+display:inline-block;
+margin-right:80px;
+animation:scrollText 30s linear infinite;
+}
+
+@keyframes scrollText{
+0%{transform:translateX(0);}
+100%{transform:translateX(-100%);}
+}
+
+@keyframes fadeUp{
+to{opacity:1;transform:translateY(0);}
+}
+
+/* CRM SECTION */
+.crm-section{
+background:#000;
+padding:140px 8%;
+position:relative;
+display:flex;
+gap:80px;
+}
+
+.crm-section::after{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background-image:
+linear-gradient(to right, rgba(255,255,255,.15) 1px, transparent 1px);
+background-size:16.66% 100%;
+pointer-events:none;
+}
+
+.crm-text{flex:1;position:relative;z-index:2;}
+
+.crm-email-title{
+font-family:'Montserrat',sans-serif;
+letter-spacing:2px;
+font-size:13px;
+opacity:.9;
+margin-bottom:8px;
+}
+
+.crm-email{
+font-family:'Montserrat',sans-serif;
+font-size:14px;
+letter-spacing:2px;
+opacity:.7;
+margin-bottom:30px;
+}
+
+.crm-heading{
+font-family:'Playfair Display',serif;
+font-weight:900;
+font-size:60px;
+margin-bottom:60px;
+line-height:1.1;
+}
+
+.crm-text p{
+font-family:'Montserrat',sans-serif;
+font-weight:300;
+font-size:18px;
+line-height:32px;
+margin-bottom:40px;
+cursor:pointer;
+transition:.4s;
+}
+
+.crm-text p.active{
+text-shadow:
+0 0 15px rgba(255,255,255,.8),
+0 0 40px rgba(255,255,255,.4);
+}
+
+.crm-images{
+flex:1;
+display:flex;
+flex-direction:column;
+gap:40px;
+position:relative;
+z-index:2;
+}
+
+.crm-images img{
+width:100%;
+max-width:420px;
+border-radius:8px;
+transition:.4s;
+}
+
+.crm-images img:hover{
+transform:scale(1.05);
+box-shadow:0 20px 60px rgba(255,255,255,.15);
+}
+
+.email-below{
+background:#000;
+text-align:center;
+padding:40px 0;
+font-family:'Montserrat',sans-serif;
+letter-spacing:2px;
+font-size:15px;
+opacity:.8;
+}
+
+/* CONTACT */
+.contact-wrapper{
+background:#000;
+padding:120px 0 80px 0;
+text-align:center;
+}
+
+.social-links{
+margin-bottom:40px;
+font-family:'Montserrat',sans-serif;
+font-size:14px;
+letter-spacing:2px;
+}
+
+.social-links a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+transition:.4s;
+}
+
+.social-links a:hover{
+text-shadow:
+0 0 15px rgba(255,255,255,.9),
+0 0 40px rgba(255,200,220,.8),
+0 0 80px rgba(255,120,180,.6);
+}
+
+.contact-divider{
+width:60%;
+height:1px;
+margin:0 auto 60px auto;
+background:linear-gradient(
+to right,
+rgba(255,255,255,0),
+rgba(255,255,255,.7),
+rgba(255,255,255,0)
+);
+opacity:.8;
+}
+
+.contact-line{
+font-family:'Playfair Display',serif;
+font-size:160px;
+white-space:nowrap;
+overflow:hidden;
+font-weight:900;
+margin-bottom:80px;
+letter-spacing:-2px;
+}
+
+.contact-line span{
+display:inline-block;
+margin-right:60px;
+animation:scrollText 25s linear infinite;
+}
+
+footer{
+display:flex;
+justify-content:space-between;
+padding:0 8% 30px 8%;
+font-size:14px;
+opacity:.7;
+font-family:'Montserrat',sans-serif;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-announcement">
+READY TO GET THE MOST AMAZING SERVICE EXPERIENCE.
+</div>
+
+<nav>
+<a href="index.html">HOME</a> |
+<a href="services/index.html">SERVICES</a> |
+<a href="#contact-email">CONTACT</a>
+</nav>
+
+<div class="nav-silver-line"></div>
+
+<section class="hero">
+<div class="left">
+<div class="brand">MA</div>
+<h1 id="nameTitle">MUHAMMAD<br>ARHAM</h1>
+</div>
+
+<div class="center">
+<img src="IMG_2718.JPG" alt="Profile">
+</div>
+
+<div class="right">
+<p>– I build automation systems, CRM structures, and revenue engines that turn leads into predictable growth.</p>
+</div>
+</section>
+
+<div class="tags">
+<div>modern</div>
+<div>high quality</div>
+<div>fresh</div>
+</div>
+
+<div class="big-text" id="offerText">
+<span>I’M GONNA MAKE YOU AN OFFER YOU CAN'T REFUSE — </span>
+<span>I’M GONNA MAKE YOU AN OFFER YOU CAN'T REFUSE — </span>
+</div>
+
+<section class="crm-section">
+<div class="crm-text">
+<div class="crm-email-title">EMAIL ME</div>
+<div class="crm-email">ahmadleadoperations@gmail.com</div>
+<div class="crm-heading">WHY YOUR BUSINESS NEEDS THIS</div>
+<p>These aren’t just CRMs. These are client-capturing revenue systems designed to turn attention into structured growth.</p>
+<p>Without a proper system, you will lose clients, lose follow-ups, and silently lose money every single month.</p>
+<p>Structure creates control. Control creates predictability. Predictability creates scalable revenue.</p>
+<p>When every lead is captured, categorized, and followed strategically, revenue stops leaking and starts compounding.</p>
+<p>Structured CRM systems turn scattered inquiries into predictable pipelines and predictable pipelines into scalable growth.</p>
+</div>
+
+<div class="crm-images">
+<img src="crm1.jpg">
+<img src="crm2.jpg">
+<img src="crm3.jpg">
+</div>
+</section>
+
+<div class="email-below" id="contact-email">
+ahmadleadoperations@gmail.com
+</div>
+
+<div class="contact-wrapper">
+<div class="social-links">
+<a href="https://www.facebook.com/share/14Wtn9Lu8h1/?mibextid=wwXIfr" target="_blank">Facebook</a> |
+<a href="https://wa.me/message/LHSJCNDBCC4PA1" target="_blank">WhatsApp</a> |
+<a href="https://www.instagram.com/arham_mirza_1?igsh=MWJqdmtlbzJmcmgwNA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+</div>
+
+<div class="contact-divider"></div>
+
+<div class="contact-line">
+<span>GET IN TOUCH — GET IN TOUCH — GET IN TOUCH — </span>
+<span>GET IN TOUCH — GET IN TOUCH — GET IN TOUCH — </span>
+</div>
+
+<footer>
+<div>All rights reserved 2026</div>
+<div></div>
+</footer>
+</div>
+
+<script>
+const offer=document.getElementById("offerText");
+offer.addEventListener("click",()=>offer.classList.toggle("active"));
+
+document.querySelectorAll(".crm-text p").forEach(p=>{
+p.addEventListener("click",()=>p.classList.toggle("active"));
+});
+
+const name=document.getElementById("nameTitle");
+name.addEventListener("click",()=>{
+name.classList.remove("pop");
+void name.offsetWidth;
+name.classList.add("pop");
+});
+
+const profileImage = document.querySelector(".center img");
+
+document.addEventListener("mousemove", () => {
+profileImage.classList.add("pop-effect");
+clearTimeout(profileImage.timeout);
+profileImage.timeout = setTimeout(() => {
+profileImage.classList.remove("pop-effect");
+}, 180);
+});
+</script>
+
+</body>
+</html>
