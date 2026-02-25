@@ -14,90 +14,115 @@ scroll-behavior:smooth;
 background:#000; /* match your black sections */
 }
 /* ========================= */
-/* 📱 MOBILE RESPONSIVE FIX */
+/* 📱 CLEAN MOBILE FIX */
 /* ========================= */
 
-@media (max-width: 858px) {
+@media (max-width: 768px) {
+
+/* Fix announcement + nav spacing */
+.top-announcement{
+position:relative;
+top:0;
+left:0;
+margin:10px 0 20px 0;
+font-size:11px;
+text-align:center;
+}
 
 nav{
-right:20px;
-top:20px;
-font-size:12px;
+position:relative;
+top:0;
+right:0;
+text-align:center;
+margin-bottom:15px;
 }
 
-.top-announcement{
-left:20px;
-top:20px;
-font-size:11px;
-}
-
+/* HERO */
 .hero{
 flex-direction:column;
-padding:120px 20px 40px 20px;
+padding:80px 20px 30px 20px;
+gap:25px;
 text-align:center;
-gap:30px;
 }
 
+/* Your Name Smaller */
 #nameTitle{
-font-size:28px;
+font-size:30px;       /* smaller */
 line-height:34px;
-letter-spacing:0px;
+letter-spacing:0;
 }
 
+/* MA Logo */
 .brand{
-font-size:20px;
-padding:6px 12px;
+font-size:18px;
+padding:6px 10px;
 }
 
+/* Profile Image */
 .center img{
-width:220px;
-height:300px;
+width:200px;
+height:260px;
 }
 
+/* Right Text */
 .right{
 max-width:100%;
 font-size:14px;
 }
 
+/* Tags */
 .tags{
-gap:30px;
+gap:25px;
 font-size:11px;
-letter-spacing:2px;
-flex-wrap:wrap;
+margin-top:20px;
 }
 
+/* OFFER LINE (Scrolling Text) */
 .big-text{
-font-size:38px;
+font-size:34px;   /* medium small */
 margin-top:40px;
 }
 
+/* CRM SECTION */
 .crm-section{
 flex-direction:column;
-padding:80px 20px;
-gap:50px;
+padding:60px 20px;
+gap:40px;
 }
 
+/* CRM Heading */
 .crm-heading{
-font-size:34px;
+font-size:28px;   /* smaller */
+line-height:1.2;
 }
 
+/* CRM Paragraphs */
 .crm-text p{
-font-size:15px;
-line-height:26px;
+font-size:14px;
+line-height:24px;
 }
 
+/* Remove vertical grid line effect on mobile */
+.crm-section::after{
+display:none;
+}
+
+/* Images */
 .crm-images img{
-max-width:90%;
+max-width:100%;
 }
 
+/* GET IN TOUCH line */
 .contact-line{
-font-size:40px;
+font-size:40px;   /* medium small */
+margin-bottom:40px;
 }
 
+/* Footer */
 footer{
 flex-direction:column;
 text-align:center;
-gap:10px;
+gap:8px;
 }
 
 }
@@ -606,6 +631,7 @@ profileImage.classList.remove("pop-effect");
 
 </body>
 </html>
+
 
 
 
