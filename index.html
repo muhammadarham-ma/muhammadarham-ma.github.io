@@ -13,90 +13,97 @@ html{
 scroll-behavior:smooth;
 background:#000; /* match your black sections */
 }
-/* ========================= */
-/* 📱 PROFESSIONAL MOBILE FIX */
-/* ========================= */
+/* ===================================== */
+/* 🔥 PREMIUM MOBILE REBUILD */
+/* ===================================== */
 
-@media (max-width: 768px) {
+@media (max-width: 100px) {
 
-/* General */
-body{
-background-attachment:scroll;
+html, body{
+overflow-x:hidden;
 }
 
-/* Top */
-.top-announcement{
-left:20px;
-top:15px;
-font-size:11px;
-letter-spacing:1px;
+/* Hide heavy decorative elements */
+.big-text,
+.contact-line,
+.nav-silver-line{
+display:none;
 }
 
+/* NAVIGATION CLEAN FIX */
 nav{
-right:20px;
-top:15px;
-font-size:12px;
+position:relative;
+top:auto;
+right:auto;
+text-align:center;
+margin-top:20px;
+font-size:14px;
 }
 
-/* Hero Section */
+nav a{
+display:inline-block;
+margin:0 8px;
+}
+
+/* HERO REBUILD */
 .hero{
 flex-direction:column;
+padding:80px 20px 40px 20px;
 text-align:center;
-padding:120px 20px 40px 20px;
-gap:30px;
+gap:25px;
 }
 
 .brand{
-font-size:22px;
-letter-spacing:3px;
-padding:6px 12px;
+font-size:18px;
+letter-spacing:2px;
+padding:6px 10px;
 }
 
 #nameTitle{
-font-size:42px;
-line-height:48px;
+font-size:34px !important;
+line-height:40px !important;
+letter-spacing:0;
 }
 
 .center img{
-width:240px;
+width:200px;
 height:auto;
+transform:none;
 }
 
 .right{
 max-width:100%;
 font-size:14px;
 line-height:22px;
+padding:0 10px;
 }
 
-/* Tags */
+/* TAGS FIX */
 .tags{
-gap:20px;
+gap:15px;
 font-size:11px;
-letter-spacing:2px;
+letter-spacing:1px;
+margin-top:25px;
 flex-wrap:wrap;
-margin-top:30px;
 }
 
-/* Remove giant scrolling text on mobile */
-.big-text{
-display:none;
-}
-
-/* CRM Section */
+/* CRM SECTION CLEAN STACK */
 .crm-section{
 flex-direction:column;
-padding:80px 20px;
-gap:50px;
+padding:60px 20px;
+gap:40px;
 }
 
 .crm-heading{
-font-size:32px;
-margin-bottom:30px;
+font-size:26px;
+line-height:32px;
+margin-bottom:20px;
 }
 
 .crm-text p{
 font-size:14px;
-line-height:24px;
+line-height:22px;
+margin-bottom:20px;
 }
 
 .crm-images{
@@ -105,21 +112,37 @@ align-items:center;
 
 .crm-images img{
 max-width:100%;
+height:auto;
 }
 
-/* Contact */
-.contact-line{
-display:none; /* remove huge scrolling text */
+/* EMAIL */
+.email-below{
+font-size:13px;
+padding:30px 10px;
 }
 
-.contact-divider{
-width:80%;
+/* CONTACT CLEAN */
+.contact-wrapper{
+padding:60px 20px;
+}
+
+.social-links{
+font-size:13px;
 }
 
 footer{
 flex-direction:column;
 text-align:center;
-gap:10px;
+gap:8px;
+font-size:12px;
+padding:20px;
+}
+
+/* Reduce animation effects on mobile */
+#nameTitle,
+.center img{
+animation:none;
+filter:none;
 }
 
 }
@@ -628,4 +651,5 @@ profileImage.classList.remove("pop-effect");
 
 </body>
 </html>
+
 
