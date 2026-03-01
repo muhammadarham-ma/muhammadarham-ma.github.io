@@ -13,96 +13,90 @@ html{
 scroll-behavior:smooth;
 background:#000; /* match your black sections */
 }
-/* ================================= */
-/* 🌍 UNIVERSAL RESPONSIVE SYSTEM */
-/* ================================= */
+/* ============================= */
+/* 🔥 CLEAN RESPONSIVE TOP AREA */
+/* ============================= */
 
-*{
-box-sizing:border-box;
+/* Top announcement */
+.top-announcement{
+position:absolute;
+top:20px;
+left:30px;
+font-family:'Montserrat',sans-serif;
+font-size:12px;
+letter-spacing:1px;
+opacity:.8;
+z-index:10;
 }
 
-html{
-font-size:clamp(14px, 1.2vw, 18px);
-}
-
-body{
-margin:0;
-overflow-x:hidden;
-}
-
-/* Global container behavior */
-section{
-width:100%;
-padding:clamp(60px, 8vw, 140px) clamp(20px, 6vw, 8%);
-}
-
-/* Make everything flexible */
-.hero,
-.crm-section{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-align-items:center;
-gap:clamp(20px, 4vw, 80px);
-}
-
-/* Text scales automatically */
-#nameTitle{
-font-size:clamp(2rem, 6vw, 5.5rem);
-line-height:1.1;
-}
-
-.big-text{
-font-size:clamp(2rem, 10vw, 9rem);
-text-align:center;
-white-space:normal;
-}
-
-.contact-line{
-font-size:clamp(2rem, 10vw, 10rem);
-text-align:center;
-white-space:normal;
-}
-
-.brand{
-font-size:clamp(1rem, 3vw, 2rem);
-}
-
-/* Paragraph scaling */
-.right,
-.crm-text p{
-font-size:clamp(0.9rem, 2vw, 1.1rem);
-max-width:600px;
-}
-
-/* Images auto scale */
-img{
-max-width:100%;
-height:auto;
-}
-
-/* Fix huge tag spacing */
-.tags{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:clamp(15px, 5vw, 160px);
-}
-
-/* Navigation auto fit */
+/* Navigation */
 nav{
+position:absolute;
+top:20px;
+right:30px;
 display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:clamp(10px, 3vw, 20px);
-padding:20px;
+gap:20px;
+font-family:'Montserrat',sans-serif;
+font-size:13px;
+letter-spacing:1px;
 }
 
-/* Remove overflow creators */
-.big-text span,
-.contact-line span{
-display:inline;
-animation:none;
+nav a{
+color:white;
+text-decoration:none;
+opacity:.8;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:1;
+}
+
+/* Hero layout */
+.hero{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+padding:clamp(100px, 12vw, 160px) 6% 60px 6%;
+gap:40px;
+}
+
+/* Brand */
+.brand{
+font-family:'Playfair Display',serif;
+font-size:clamp(16px, 3vw, 28px);
+letter-spacing:4px;
+margin-bottom:20px;
+}
+
+/* Name */
+#nameTitle{
+font-family:'Playfair Display',serif;
+font-weight:900;
+font-size:clamp(28px, 6vw, 64px);
+line-height:1.1;
+letter-spacing:-1px;
+}
+
+/* Profile image */
+.center img{
+width:clamp(180px, 28vw, 320px);
+height:auto;
+border-radius:8px;
+}
+
+/* Right description */
+.right{
+max-width:400px;
+font-family:'Montserrat',sans-serif;
+font-size:clamp(14px, 2vw, 18px);
+line-height:1.6;
+}
+
+/* Prevent overflow */
+html, body{
+overflow-x:hidden;
 }
 
 body{
@@ -609,4 +603,5 @@ profileImage.classList.remove("pop-effect");
 
 </body>
 </html>
+
 
