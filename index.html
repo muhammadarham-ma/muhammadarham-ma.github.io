@@ -13,39 +13,93 @@ html{
 scroll-behavior:smooth;
 background:#000; /* match your black sections */
 }
-/* ===== CLEAN FOUNDATION ===== */
+/* ========================= */
+/* 📱 MOBILE RESPONSIVE FIX */
+/* ========================= */
 
-html{
-font-size:62.5%; /* 1rem = 10px */
-overflow-x:hidden;
+@media (max-width: 250px) {
+
+nav{
+right:20px;
+top:20px;
+font-size:12px;
 }
 
-body{
-font-family:'Inter',sans-serif;
-font-size:1.6rem;
-line-height:1.6;
-overflow-x:hidden;
+.top-announcement{
+left:20px;
+top:20px;
+font-size:11px;
 }
 
-/* Centered container system */
-section{
-width:100%;
-max-width:1200px;
-margin:0 auto;
-padding:6rem 2rem;
+.hero{
+flex-direction:column;
+padding:120px 20px 40px 20px;
+text-align:center;
+gap:30px;
 }
 
-/* Make everything responsive */
-img{
+#nameTitle{
+font-size:38px;
+line-height:44px;
+letter-spacing:0px;
+}
+
+.brand{
+font-size:20px;
+padding:6px 12px;
+}
+
+.center img{
+width:220px;
+height:300px;
+}
+
+.right{
 max-width:100%;
-height:auto;
-display:block;
+font-size:14px;
 }
 
-/* Remove overflow creators */
-.big-text,
+.tags{
+gap:30px;
+font-size:11px;
+letter-spacing:2px;
+flex-wrap:wrap;
+}
+
+.big-text{
+font-size:38px;
+margin-top:40px;
+}
+
+.crm-section{
+flex-direction:column;
+padding:80px 20px;
+gap:50px;
+}
+
+.crm-heading{
+font-size:34px;
+}
+
+.crm-text p{
+font-size:15px;
+line-height:26px;
+}
+
+.crm-images img{
+max-width:90%;
+}
+
 .contact-line{
-display:none; /* This is killing your mobile */
+font-size:40px;
+}
+
+footer{
+flex-direction:column;
+text-align:center;
+gap:10px;
+}
+
 }
 
 body{
@@ -552,6 +606,3 @@ profileImage.classList.remove("pop-effect");
 
 </body>
 </html>
-
-
-
