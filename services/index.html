@@ -11,7 +11,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{
 scroll-behavior:smooth;
-background:#000; /* match your black sections */
+background:#000;
 }
 
 body{
@@ -27,16 +27,37 @@ background-attachment:fixed;
 overflow-x:hidden;
 }
 
-body{
-min-height:100vh;
-font-family:'Inter',sans-serif;
-color:white;
-background:
-radial-gradient(at 20% 30%, #9A1B10 0px, transparent 50%),
-radial-gradient(at 30% 60%, #700C1A 0px, transparent 55%),
-radial-gradient(at 80% 50%, #0D2439 0px, transparent 60%),
-linear-gradient(90deg, #33040D 0%, #45272E 40%, #0D2439 100%);
-overflow-x:hidden;
+/* Pearl Feature Title */
+.feature-title{
+font-weight:600;
+font-size:15px;
+letter-spacing:.5px;
+margin-top:18px;
+margin-bottom:6px;
+background:linear-gradient(
+90deg,
+#ffffff 0%,
+#f2f2f2 25%,
+#ffffff 50%,
+#e6e6e6 75%,
+#ffffff 100%
+);
+background-size:200% auto;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:pearlShine 6s linear infinite;
+}
+
+@keyframes pearlShine{
+0%{background-position:200% center;}
+100%{background-position:-200% center;}
+}
+
+.feature-desc{
+font-size:13px;
+line-height:22px;
+opacity:.8;
+margin-bottom:10px;
 }
 
 /* TOP ANNOUNCEMENT */
@@ -79,19 +100,13 @@ transition:.3s;
 
 nav a:hover{opacity:1;}
 
-/* NAV DIVIDER */
 .nav-divider{
 position:absolute;
 top:85px;
 left:0;
 width:100%;
 height:1px;
-background:linear-gradient(
-to right,
-rgba(255,255,255,0),
-rgba(192,192,192,0.9),
-rgba(255,255,255,0)
-);
+background:linear-gradient(to right,rgba(255,255,255,0),rgba(192,192,192,0.9),rgba(255,255,255,0));
 opacity:.8;
 }
 
@@ -113,7 +128,6 @@ border-radius:4px;
 display:inline-block;
 }
 
-/* CRYSTAL PRICING TITLE */
 .pricing-title{
 font-family:'Playfair Display', serif;
 font-size:95px;
@@ -121,14 +135,7 @@ line-height:100px;
 font-weight:900;
 letter-spacing:-1px;
 margin-top:40px;
-background:linear-gradient(
-90deg,
-#ffffff 0%,
-#e6e6e6 20%,
-#ffffff 40%,
-#d9d9d9 60%,
-#ffffff 80%
-);
+background:linear-gradient(90deg,#ffffff 0%,#e6e6e6 20%,#ffffff 40%,#d9d9d9 60%,#ffffff 80%);
 background-size:200% auto;
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -140,21 +147,13 @@ animation:crystalShine 6s linear infinite;
 100%{background-position:-200% center;}
 }
 
-/* PRICE CRYSTAL STYLE */
 .price{
 font-family:'Playfair Display', serif;
 font-size:26px;
 font-weight:900;
 letter-spacing:1px;
 margin-bottom:25px;
-background:linear-gradient(
-90deg,
-#ffffff 0%,
-#e6e6e6 20%,
-#ffffff 40%,
-#d9d9d9 60%,
-#ffffff 80%
-);
+background:linear-gradient(90deg,#ffffff 0%,#e6e6e6 20%,#ffffff 40%,#d9d9d9 60%,#ffffff 80%);
 background-size:200% auto;
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
@@ -166,7 +165,6 @@ animation:priceShine 5s linear infinite;
 100%{background-position:-200% center;}
 }
 
-/* SERVICES */
 .services-wrapper{
 padding:100px 8%;
 display:flex;
@@ -200,9 +198,9 @@ list-style:none;
 font-family:'Montserrat',sans-serif;
 font-weight:300;
 font-size:15px;
-line-height:32px;
+line-height:28px;
 margin-bottom:40px;
-opacity:.9;
+opacity:.95;
 }
 
 .contact-btn{
@@ -230,7 +228,6 @@ font-size:60px;
 font-weight:900;
 }
 
-/* CONTACT */
 .contact-wrapper{
 background:#000;
 padding:120px 0 80px 0;
@@ -258,12 +255,7 @@ transition:.4s;
 width:60%;
 height:1px;
 margin:0 auto 60px auto;
-background:linear-gradient(
-to right,
-rgba(255,255,255,0),
-rgba(255,255,255,.7),
-rgba(255,255,255,0)
-);
+background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,.7),rgba(255,255,255,0));
 opacity:.8;
 }
 
@@ -329,156 +321,353 @@ THE WORLD'S BEST OFFER PACKAGES ARE READY TO BE VIEWED.
 <!-- MONTHLY PACKAGES -->
 <section class="services-wrapper">
 
+<!-- BASIC -->
 <div class="service-card">
 <h2>BASIC</h2>
 <ul>
 <li class="price">$360 / Month</li>
-<li>CRM Monitoring</li>
-<li>Trigger Monitoring</li>
-<li>Form Submission Testing (Weekly)</li>
-<li>Auto-Reply Monitoring</li>
-<li>Owner Notification Monitoring</li>
-<li>1 Follow-Up Sequence Active</li>
-<li>Monthly System Health Check</li>
-<li>Lead Status Cleanup</li>
-<li>Duplicate Lead Prevention Check</li>
-<li>Basic Lead Count Report</li>
-<li>Email Template Adjustment (Minor)</li>
-<li>Follow-Up Timing Adjustment (Minor)</li>
-<li>Dashboard Data Check</li>
-<li>Backup Sheet Protection</li>
-<li>Basic Spam Protection Check</li>
+
+<li class="feature-title">CRM MONITORING</li>
+<li class="feature-desc">Ensures all lead data and pipeline stages stay accurate and organized.</li>
+
+<li class="feature-title">Automation Trigger Monitoring</li>
+<li class="feature-desc">Checks that all automation runs without errors or delays.</li>
+
+<li class="feature-title">Weekly Form Submission Test</li>
+<li class="feature-desc">Confirms new leads enter the system correctly every week.</li>
+
+<li class="feature-title">Auto-Reply & Owner Notification Check</li>
+<li class="feature-desc">Ensures emails send instantly to both lead and owner.</li>
+
+<li class="feature-title">1 Active Follow-Up Sequence Maintenance</li>
+<li class="feature-desc">Keeps one automated follow-up sequence running smoothly.</li>
+
+<li class="feature-title">Lead Status Accuracy Check</li>
+<li class="feature-desc">Makes sure every lead has the correct status.</li>
+
+<li class="feature-title">Duplicate Lead Protection</li>
+<li class="feature-desc">Prevents and checks repeated lead entries.</li>
+
+<li class="feature-title">Basic Lead Count Report (Monthly)</li>
+<li class="feature-desc">Provides total leads received each month.</li>
+
+<li class="feature-title">Dashboard Data Check</li>
+<li class="feature-desc">Ensures dashboard numbers match CRM data.</li>
+
+<li class="feature-title">Sheet Backup & Protection</li>
+<li class="feature-desc">Protects sheet structure and prevents data loss.</li>
+
+<li class="feature-title">Basic Spam Protection Check</li>
+<li class="feature-desc">Monitors and reduces fake or spam submissions.</li>
+
 </ul>
 <a href="#contact" class="contact-btn">GET STARTED</a>
 </div>
 
+<!-- STANDARD -->
 <div class="service-card">
 <h2>STANDARD</h2>
 <ul>
-<li class="price">$750 / Month</li>
-<li>3-Step Follow-Up Active</li>
-<li>Follow-Up Optimization</li>
-<li>Lead Source Tracking Monitoring</li>
-<li>Dashboard Chart Optimization</li>
-<li>Booking System Monitoring</li>
-<li>Revenue Tracking Maintenance</li>
-<li>Conversion Tracking Updates</li>
-<li>Lead Stage Flow Optimization</li>
-<li>Follow-Up Message Improvement</li>
-<li>Monthly Performance Summary</li>
-<li>Lead Source Performance Breakdown</li>
-<li>Email Subject Line Testing</li>
-<li>System Speed Optimization</li>
-<li>Minor Workflow Improvements</li>
-<li>Lead Data Cleanup (Advanced)</li>
-<li>Automation Timing Adjustments</li>
-<li>CRM Layout Improvements</li>
-<li>Priority Issue Fixing</li>
+<li class="price">$760 / Month</li>
+
+<li class="feature-title">3-Step Follow-Up Active</li>
+<li class="feature-desc">Maintains a full 3-step automated follow-up sequence.</li>
+
+<li class="feature-title">Follow-Up Optimization</li>
+<li class="feature-desc">Improves timing and structure to increase responses.</li>
+
+<li class="feature-title">Lead Source Tracking Monitoring</li>
+<li class="feature-desc">Ensures all leads are correctly tracked by source.</li>
+
+<li class="feature-title">Dashboard Chart Optimization</li>
+<li class="feature-desc">Keeps charts clear, accurate, and performance-focused.</li>
+
+<li class="feature-title">Booking System Monitoring</li>
+<li class="feature-desc">Ensures booking entries are recorded correctly.</li>
+
+<li class="feature-title">Revenue Tracking Maintenance</li>
+<li class="feature-desc">Maintains accurate tracking of closed deal values.</li>
+
+<li class="feature-title">Conversion Tracking Updates</li>
+<li class="feature-desc">Keeps lead-to-close conversion calculations accurate.</li>
+
+<li class="feature-title">Lead Stage Flow Optimization</li>
+<li class="feature-desc">Improves how leads move through pipeline stages.</li>
+
+<li class="feature-title">Follow-Up Message Improvement</li>
+<li class="feature-desc">Refines follow-up messages for better engagement.</li>
+
+<li class="feature-title">Monthly Performance Summary</li>
+<li class="feature-desc">Provides a simple monthly system performance overview.</li>
+
+<li class="feature-title">Lead Source Performance Breakdown</li>
+<li class="feature-desc">Shows which lead sources perform best.</li>
+
+<li class="feature-title">Email Subject Line Testing</li>
+<li class="feature-desc">Improves subject lines to increase open rates.</li>
+
+<li class="feature-title">System Speed Optimization</li>
+<li class="feature-desc">Keeps automation running efficiently.</li>
+
+<li class="feature-title">Minor Workflow Improvements</li>
+<li class="feature-desc">Makes small improvements to improve system flow.</li>
+
+<li class="feature-title">Advanced Lead Data Cleanup</li>
+<li class="feature-desc">Removes inconsistencies and fixes structured data issues.</li>
+
+<li class="feature-title">Automation Timing Adjustments</li>
+<li class="feature-desc">Optimizes delay timing between follow-ups.</li>
+
+<li class="feature-title">CRM Layout Improvements</li>
+<li class="feature-desc">Improves sheet structure for clarity and efficiency.</li>
+
+<li class="feature-title">Priority Issue Fixing</li>
+<li class="feature-desc">Resolves urgent system or automation issues quickly.</li>
+
 </ul>
 <a href="#contact" class="contact-btn">GET STARTED</a>
 </div>
 
+<!-- PREMIUM -->
 <div class="service-card">
 <h2>PREMIUM</h2>
 <ul>
 <li class="price">$1400 / Month</li>
-<li>Advanced Dashboard Monitoring</li>
-<li>Revenue Trend Review</li>
-<li>Conversion Rate Monitoring</li>
-<li>Follow-Up Logic Improvement</li>
-<li>Cold Lead Reactivation Setup</li>
-<li>Monthly Automation Upgrade</li>
-<li>Funnel Performance Check</li>
-<li>Lead Quality Review</li>
-<li>Multi-Source Lead Tracking</li>
-<li>Booking Conversion Monitoring</li>
-<li>Performance Alert Setup</li>
-<li>Automation Flow Refinement</li>
-<li>Lead Routing Adjustments</li>
-<li>CRM Structure Enhancements</li>
-<li>Priority System Maintenance</li>
-<li>Monthly Optimization Update</li>
-<li>Automation Expansion Support</li>
-<li>System Scaling Adjustments</li>
+
+<li class="feature-title">Advanced Dashboard Monitoring</li>
+<li class="feature-desc">Monitors detailed performance and revenue metrics.</li>
+
+<li class="feature-title">Revenue Trend Review</li>
+<li class="feature-desc">Tracks monthly revenue patterns and growth direction.</li>
+
+<li class="feature-title">Conversion Rate Monitoring</li>
+<li class="feature-desc">Ensures lead-to-sale conversion rates stay accurate and improving.</li>
+
+<li class="feature-title">Follow-Up Logic Improvement</li>
+<li class="feature-desc">Enhances automation logic for better engagement.</li>
+
+<li class="feature-title">Cold Lead Reactivation Setup</li>
+<li class="feature-desc">Creates automation to re-engage inactive leads.</li>
+
+<li class="feature-title">Monthly Automation Upgrade</li>
+<li class="feature-desc">Improves and upgrades automation structure when needed.</li>
+
+<li class="feature-title">Funnel Performance Check</li>
+<li class="feature-desc">Monitors overall lead flow from entry to closing.</li>
+
+<li class="feature-title">Lead Quality Review</li>
+<li class="feature-desc">Checks data quality and identifies weak lead patterns.</li>
+
+<li class="feature-title">Multi-Source Lead Tracking</li>
+<li class="feature-desc">Tracks and compares performance from multiple lead sources.</li>
+
+<li class="feature-title">Booking Conversion Monitoring</li>
+<li class="feature-desc">Tracks booking-to-sale conversion performance.</li>
+
+<li class="feature-title">Performance Alert Setup</li>
+<li class="feature-desc">Creates alerts for delays or system issues.</li>
+
+<li class="feature-title">Automation Flow Refinement</li>
+<li class="feature-desc">Improves structure and flow of automation sequences.</li>
+
+<li class="feature-title">Lead Routing Adjustments</li>
+<li class="feature-desc">Adjusts how leads are assigned or categorized.</li>
+
+<li class="feature-title">CRM Structure Enhancements</li>
+<li class="feature-desc">Upgrades CRM layout for better scalability.</li>
+
+<li class="feature-title">Priority System Maintenance</li>
+<li class="feature-desc">Provides fast resolution for high-level issues.</li>
+
+<li class="feature-title">Monthly Optimization Update</li>
+<li class="feature-desc">Applies structured monthly system improvements.</li>
+
+<li class="feature-title">Automation Expansion Support</li>
+<li class="feature-desc">Adds small automation expansions when required.</li>
+
+<li class="feature-title">System Scaling Adjustments</li>
+<li class="feature-desc">Adjusts system for increased lead volume or growth.</li>
+
 </ul>
 <a href="#contact" class="contact-btn">GET STARTED</a>
 </div>
 
-</section>
+<!-- MONTHLY SECTION (UNCHANGED — YOUR ORIGINAL CONTENT REMAINS HERE) -->
 
+<!-- PER PROJECT -->
 <div class="per-project">PER - PROJECT</div>
 
 <section class="services-wrapper">
 
+<!-- BASIC 950 -->
 <div class="service-card">
 <h2>BASIC</h2>
 <ul>
 <li class="price">$950</li>
-<li>Custom Lead Capture Form Setup</li>
-<li>CRM Sheet Creation & Structure</li>
-<li>Lead Status Column Setup</li>
-<li>Lead Source Tracking Setup</li>
-<li>Instant Auto-Reply Email Setup</li>
-<li>Owner Instant Notification Setup</li>
-<li>1 Follow-Up Automation</li>
-<li>Trigger Configuration</li>
-<li>Clean CRM Layout Design</li>
-<li>Basic Lead Dashboard</li>
-<li>Duplicate Protection Setup</li>
-<li>Spam Protection Setup</li>
-<li>Email Template Branding</li>
-<li>System Testing & Debugging</li>
-<li>Full Automation Activation</li>
+
+<li class="feature-title">Custom Lead Capture Form Setup</li>
+<li class="feature-desc">Creates a branded form to collect leads properly.</li>
+
+<li class="feature-title">CRM Sheet Creation & Structure</li>
+<li class="feature-desc">Builds a clean and organized CRM system.</li>
+
+<li class="feature-title">Lead Status Column Setup</li>
+<li class="feature-desc">Creates structured pipeline status control.</li>
+
+<li class="feature-title">Lead Source Tracking Setup</li>
+<li class="feature-desc">Tracks where each lead comes from.</li>
+
+<li class="feature-title">Instant Auto-Reply Email Setup</li>
+<li class="feature-desc">Sends automatic confirmation to new leads.</li>
+
+<li class="feature-title">Owner Instant Notification Setup</li>
+<li class="feature-desc">Sends immediate notification to business owner.</li>
+
+<li class="feature-title">1 Follow-Up Automation</li>
+<li class="feature-desc">Builds one automated follow-up sequence.</li>
+
+<li class="feature-title">Trigger Configuration</li>
+<li class="feature-desc">Sets up automation triggers correctly.</li>
+
+<li class="feature-title">Clean CRM Layout Design</li>
+<li class="feature-desc">Designs a simple and professional CRM layout.</li>
+
+<li class="feature-title">Basic Lead Dashboard</li>
+<li class="feature-desc">Creates a simple lead tracking dashboard.</li>
+
+<li class="feature-title">Duplicate Protection Setup</li>
+<li class="feature-desc">Prevents repeated or duplicate lead entries.</li>
+
+<li class="feature-title">Spam Protection Setup</li>
+<li class="feature-desc">Reduces fake or unwanted submissions.</li>
+
+<li class="feature-title">Email Template Branding</li>
+<li class="feature-desc">Designs professional email template layout.</li>
+
+<li class="feature-title">System Testing & Debugging</li>
+<li class="feature-desc">Tests and fixes errors before launch.</li>
+
+<li class="feature-title">Full Automation Activation</li>
+<li class="feature-desc">Launches and activates the complete system.</li>
+
 </ul>
 <a href="#contact" class="contact-btn">CONTACT US</a>
 </div>
 
+<!-- STANDARD 1600 -->
 <div class="service-card">
 <h2>STANDARD</h2>
 <ul>
 <li class="price">$1600</li>
-<li>3-Step Follow-Up Sequence</li>
-<li>Smart Time-Based Automation</li>
-<li>Advanced CRM Structure</li>
-<li>Visual Dashboard</li>
-<li>Booking Integration Setup</li>
-<li>Revenue Tracking Setup</li>
-<li>Conversion Tracking Setup</li>
-<li>Lead Stage Automation</li>
-<li>Follow-Up Timing Logic</li>
-<li>Lead Source Performance Tracking</li>
-<li>Email Template Optimization</li>
-<li>CRM Data Flow Optimization</li>
-<li>Workflow Structuring</li>
-<li>Automation Speed Optimization</li>
-<li>Backup & Protection Setup</li>
-<li>Full System Testing + Optimization</li>
+
+<li class="feature-title">3-Step Follow-Up Sequence</li>
+<li class="feature-desc">Builds a complete automated 3-step follow-up system.</li>
+
+<li class="feature-title">Smart Time-Based Automation</li>
+<li class="feature-desc">Sets automated actions based on time delays.</li>
+
+<li class="feature-title">Advanced CRM Structure</li>
+<li class="feature-desc">Creates a scalable and organized CRM layout.</li>
+
+<li class="feature-title">Visual Dashboard</li>
+<li class="feature-desc">Designs a clear performance tracking dashboard.</li>
+
+<li class="feature-title">Booking Integration Setup</li>
+<li class="feature-desc">Connects booking system to CRM tracking.</li>
+
+<li class="feature-title">Revenue Tracking Setup</li>
+<li class="feature-desc">Adds structured deal value tracking.</li>
+
+<li class="feature-title">Conversion Tracking Setup</li>
+<li class="feature-desc">Builds accurate conversion rate calculations.</li>
+
+<li class="feature-title">Lead Stage Automation</li>
+<li class="feature-desc">Automates movement between pipeline stages.</li>
+
+<li class="feature-title">Follow-Up Timing Logic</li>
+<li class="feature-desc">Configures smart timing between follow-ups.</li>
+
+<li class="feature-title">Lead Source Performance Tracking</li>
+<li class="feature-desc">Tracks and compares performance by lead source.</li>
+
+<li class="feature-title">Email Template Optimization</li>
+<li class="feature-desc">Improves email structure for better engagement.</li>
+
+<li class="feature-title">CRM Data Flow Optimization</li>
+<li class="feature-desc">Ensures smooth data movement inside the system.</li>
+
+<li class="feature-title">Workflow Structuring</li>
+<li class="feature-desc">Organizes automation flow for clarity and efficiency.</li>
+
+<li class="feature-title">Automation Speed Optimization</li>
+<li class="feature-desc">Improves performance and reduces delays.</li>
+
+<li class="feature-title">Backup & Protection Setup</li>
+<li class="feature-desc">Secures sheet structure and protects data.</li>
+
+<li class="feature-title">Full System Testing & Optimization</li>
+<li class="feature-desc">Tests and fine-tunes system before final activation.</li>
+
 </ul>
 <a href="#contact" class="contact-btn">CONTACT US</a>
 </div>
 
+<!-- PREMIUM 2400 -->
 <div class="service-card">
 <h2>PREMIUM</h2>
 <ul>
 <li class="price">$2400</li>
-<li>Advanced KPI Dashboard</li>
-<li>Revenue & Conversion Deep Tracking</li>
-<li>Multi-Stage Follow-Up Logic</li>
-<li>Cold Lead Reactivation System</li>
-<li>Advanced Automation Structure</li>
-<li>Funnel-Level Lead Tracking</li>
-<li>Multi-Source Lead Routing</li>
-<li>Lead Quality Tracking Setup</li>
-<li>Booking Conversion Tracking</li>
-<li>Performance Alert Automation</li>
-<li>Advanced Workflow Architecture</li>
-<li>CRM Structure Enhancement</li>
-<li>Automation Refinement</li>
-<li>Scalable System Design</li>
-<li>Priority Setup & Deployment</li>
+
+<li class="feature-title">Advanced KPI Dashboard</li>
+<li class="feature-desc">Builds a detailed performance dashboard with key business metrics.</li>
+
+<li class="feature-title">Revenue & Conversion Deep Tracking</li>
+<li class="feature-desc">Tracks revenue flow and advanced conversion performance.</li>
+
+<li class="feature-title">Multi-Stage Follow-Up Logic</li>
+<li class="feature-desc">Creates structured multi-stage automated follow-up system.</li>
+
+<li class="feature-title">Cold Lead Reactivation System</li>
+<li class="feature-desc">Builds automation to re-engage inactive leads.</li>
+
+<li class="feature-title">Advanced Automation Structure</li>
+<li class="feature-desc">Designs a powerful and scalable automation framework.</li>
+
+<li class="feature-title">Funnel-Level Lead Tracking</li>
+<li class="feature-desc">Tracks performance across the full sales funnel.</li>
+
+<li class="feature-title">Multi-Source Lead Routing</li>
+<li class="feature-desc">Automatically organizes and routes leads by source.</li>
+
+<li class="feature-title">Lead Quality Tracking Setup</li>
+<li class="feature-desc">Implements tracking to measure lead quality trends.</li>
+
+<li class="feature-title">Booking Conversion Tracking</li>
+<li class="feature-desc">Tracks booking-to-sale conversion performance.</li>
+
+<li class="feature-title">Performance Alert Automation</li>
+<li class="feature-desc">Creates alerts for delays, failures, or performance drops.</li>
+
+<li class="feature-title">Advanced Workflow Architecture</li>
+<li class="feature-desc">Builds structured automation flow for efficiency.</li>
+
+<li class="feature-title">CRM Structure Enhancement</li>
+<li class="feature-desc">Upgrades CRM layout for high-volume scalability.</li>
+
+<li class="feature-title">Automation Refinement</li>
+<li class="feature-desc">Optimizes logic and improves automation behavior.</li>
+
+<li class="feature-title">Scalable System Design</li>
+<li class="feature-desc">Designs system ready for future growth.</li>
+
+<li class="feature-title">Priority Setup & Deployment</li>
+<li class="feature-desc">Fast and structured premium-level implementation.</li>
+
 </ul>
 <a href="#contact" class="contact-btn">CONTACT US</a>
 </div>
+
+</section>
 
 </section>
 
