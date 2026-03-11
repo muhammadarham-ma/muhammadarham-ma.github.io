@@ -13,11 +13,55 @@ html{
 scroll-behavior:smooth;
 background:#000; /* match your black sections */
 }
-/* ========================= */
-/* 📱 MOBILE RESPONSIVE FIX */
-/* ========================= */
+/* ============================= */
+/* 📱 TABLET RESPONSIVE */
+/* ============================= */
 
-@media (max-width: 250px) {
+@media (max-width:1024px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+gap:40px;
+}
+
+.center img{
+width:260px;
+height:340px;
+}
+
+.tags{
+gap:60px;
+flex-wrap:wrap;
+}
+
+.big-text{
+font-size:70px;
+white-space:normal;
+text-align:center;
+}
+
+.crm-section{
+flex-direction:column;
+gap:60px;
+}
+
+.crm-heading{
+font-size:46px;
+}
+
+.contact-line{
+font-size:80px;
+white-space:normal;
+}
+
+}
+
+/* ============================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ============================= */
+
+@media (max-width:600px){
 
 nav{
 right:20px;
@@ -32,20 +76,16 @@ font-size:11px;
 }
 
 .hero{
-flex-direction:column;
 padding:120px 20px 40px 20px;
-text-align:center;
-gap:30px;
 }
 
 #nameTitle{
-font-size:38px;
-line-height:44px;
-letter-spacing:0px;
+font-size:44px;
+line-height:50px;
 }
 
 .brand{
-font-size:20px;
+font-size:22px;
 padding:6px 12px;
 }
 
@@ -60,25 +100,22 @@ font-size:14px;
 }
 
 .tags{
-gap:30px;
+gap:20px;
 font-size:11px;
-letter-spacing:2px;
 flex-wrap:wrap;
 }
 
 .big-text{
-font-size:38px;
+font-size:36px;
 margin-top:40px;
 }
 
 .crm-section{
-flex-direction:column;
 padding:80px 20px;
-gap:50px;
 }
 
 .crm-heading{
-font-size:34px;
+font-size:32px;
 }
 
 .crm-text p{
@@ -87,17 +124,94 @@ line-height:26px;
 }
 
 .crm-images img{
-max-width:90%;
+max-width:100%;
 }
 
 .contact-line{
-font-size:40px;
+font-size:42px;
 }
 
 footer{
 flex-direction:column;
 text-align:center;
 gap:10px;
+}
+
+}
+/* ========================= */
+/* MOBILE FIX */
+/* ========================= */
+
+@media (max-width:768px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+padding:120px 20px 40px;
+gap:30px;
+}
+
+.left{
+order:1;
+}
+
+.center{
+order:2;
+}
+
+.right{
+order:3;
+max-width:100%;
+}
+
+#nameTitle{
+font-size:48px;
+line-height:54px;
+}
+
+.center img{
+width:240px;
+height:auto;
+}
+
+.tags{
+gap:25px;
+flex-wrap:wrap;
+font-size:12px;
+}
+
+.big-text{
+font-size:40px;
+margin-top:50px;
+white-space:normal;
+}
+
+.contact-line{
+font-size:46px;
+white-space:normal;
+}
+
+.crm-section{
+flex-direction:column;
+gap:60px;
+padding:80px 20px;
+}
+
+.crm-heading{
+font-size:36px;
+}
+
+footer{
+flex-direction:column;
+text-align:center;
+gap:10px;
+}
+
+}
+@media (max-width:768px){
+
+.big-text{
+font-size:36px;
 }
 
 }
@@ -193,8 +307,8 @@ justify-content:space-between;
 align-items:center;
 padding:140px 6% 60px 6%;
 gap:40px;
+flex-wrap:wrap;
 }
-
 .brand{
 font-family:'Playfair Display',serif;
 font-size:34px;
@@ -211,7 +325,7 @@ display:inline-block;
 /* GLOSSY WHITE PEARL CRYSTAL EFFECT */
 #nameTitle{
   font-family:'Playfair Display', serif;
-  font-size:84px;
+  font-size:clamp(40px,8vw,84px);
   line-height:92px;
   font-weight:600; /* reduced from 900 */
   letter-spacing:1px; /* slight spacing for elegance */
@@ -290,7 +404,8 @@ font-weight:300;
 margin-top:20px;
 display:flex;
 justify-content:center;
-gap:160px;
+gap:60px;
+flex-wrap:wrap;
 letter-spacing:4px;
 font-size:14px;
 font-family:'Montserrat',sans-serif;
@@ -299,7 +414,7 @@ font-family:'Montserrat',sans-serif;
 .big-text{
 margin-top:120px;
 font-family:'Playfair Display', serif;
-font-size:120px;
+font-size:clamp(40px,10vw,120px);
 white-space:nowrap;
 overflow:hidden;
 font-weight:500;       /* lighter, smart style */
@@ -325,7 +440,7 @@ text-shadow:
 
 .big-text span{
 display:inline-block;
-margin-right:80px;
+padding-right:60px;
 animation:scrollText 30s linear infinite;
 }
 
@@ -509,10 +624,6 @@ font-family:'Montserrat',sans-serif;
 
 <body>
 
-<div class="top-announcement">
-READY TO GET THE MOST AMAZING SERVICE EXPERIENCE.
-</div>
-
 <nav>
 <a href="index.html">HOME</a> |
 <a href="services/index.html">SERVICES</a> |
@@ -618,4 +729,3 @@ profileImage.classList.remove("pop-effect");
 
 </body>
 </html>
-
