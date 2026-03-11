@@ -20,7 +20,88 @@ html {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch; /* smooth scroll for iOS */
 }
+/* ========================== */
+/* RESPONSIVE FIX */
+/* ========================== */
 
+@media (max-width:1024px){
+
+.services-wrapper{
+gap:30px;
+}
+
+.service-card{
+flex:1 1 45%;
+max-width:500px;
+}
+
+.per-project{
+font-size:42px;
+text-align:center;
+}
+
+}
+
+@media (max-width:768px){
+
+nav{
+right:20px;
+top:30px;
+font-size:12px;
+}
+
+.top-announcement{
+font-size:10px;
+left:15px;
+}
+
+.hero{
+padding:150px 20px 70px;
+text-align:center;
+}
+
+.brand{
+font-size:24px;
+}
+
+.services-wrapper{
+padding:70px 20px;
+gap:25px;
+}
+
+.service-card{
+flex:1 1 100%;
+max-width:100%;
+padding:35px 25px;
+}
+
+.service-card h2{
+font-size:30px;
+}
+
+.service-card ul{
+font-size:14px;
+line-height:26px;
+}
+
+.per-project{
+font-size:34px;
+margin-top:40px;
+}
+
+.contact-line{
+font-size:42px;
+}
+
+.social-links{
+font-size:12px;
+}
+
+footer{
+font-size:12px;
+}
+
+}
 body {
     min-height: 100vh;
     font-family: 'Inter', sans-serif;
@@ -44,19 +125,26 @@ body {
         }
 
         /* Pearl Feature Title */
-        ..feature-title {
+        .feature-title {
             font-weight: 600;
             font-size: 14px;
             letter-spacing: .5px;
             margin-top: 10px;
             margin-bottom: 4px;
        }
-            background: linear-gradient(90deg, #ffffff 0%, #f2f2f2 25%, #ffffff 50%, #e6e6e6 75%, #ffffff 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: pearlShine 6s linear infinite;
-        }
+.feature-title {
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: .5px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+
+    background: linear-gradient(90deg, #ffffff 0%, #f2f2f2 25%, #ffffff 50%, #e6e6e6 75%, #ffffff 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: pearlShine 6s linear infinite;
+}
 
         @keyframes pearlShine {
             0% {
@@ -154,7 +242,7 @@ body {
 
         .pricing-title {
             font-family: 'Playfair Display', serif;
-            font-size: 90px;
+            font-size: clamp(42px,8vw,90px);
             line-height: 100px;
             font-weight: 620;
             letter-spacing: 0px;
@@ -296,14 +384,14 @@ body {
             opacity: .8;
         }
 
-.contact-line {
+         .contact-line {
     font-family: 'Playfair Display', serif;
-    font-size: 110px;        /* reduced from 140px */
-    white-space: nowrap;
-    overflow: hidden;
-    font-weight: 600;        /* lighter than 900 */
-    margin-bottom: 30px;
-    letter-spacing: -1px;    /* slightly less tight */
+            font-size: clamp(38px,9vw,110px);
+            white-space: nowrap;
+            overflow: hidden;
+            font-weight: 600;        /* lighter than 900 */
+            margin-bottom: 30px;
+            letter-spacing: -1px;    /* slightly less tight */
 }
 
         .contact-line span {
